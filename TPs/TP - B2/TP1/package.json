@@ -1,0 +1,15 @@
+{
+  "name": "TP1",
+  "version": "1.0.0",
+  "description": "Le premier TP1 pour apprendre à utiliser npm dans un projet simple.",
+  "main": "index.js",
+  "author": "millehorde",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "console-log-hello-world": "^1.0.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

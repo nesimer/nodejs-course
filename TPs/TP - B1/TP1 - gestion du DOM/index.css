@@ -1,0 +1,16 @@
+.active {
+  display: inline-block !important;
+}
+
+button.active {
+  background-color: gray;
+}
+
+.panel.active {
+  background-color: lightgray;
+  width: 100%;
+}
+
+.panel {
+  display: none;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mon application en AJAX LOL</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1 class="h1">Ma super app météo <3</h1>
+    <!-- Div dans laquelle on veut afficher les réponses de notre API -->
+    <div id="api-response"></div>
+    <span class="wow" id="temp"></span>°C<br />
+    <span class="wow" id="pressure"></span>hPa <br />
+    <span class="wow" id="humidity"></span>%<br />
+    <span class="wow" id="weatherIcon">X</span>
+
+    <form action="javascript:void(0);" onsubmit="findWeatherByCity(this)">
+      <label for="city">Quelle est la ville dont vous voulez la météo ?</label>
+      <input id="city" type="text" placeholder="Saisissez la ville " />
+      <input type="submit" value="Trouver la météo" />
+    </form>
+
+    <script src="js/main.js"></script>
+    <script>
+      async function findWeatherByCity(form) {
+        const city = form.city.value;
+        try {
+          // destructuring object to get only wanted field
+          const {
+            main: { temp, pressure, humidity },
+            weather
+          } = await sendQuery(
+            `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8600d7d564076529872375d01d7d93a2&units=metric`
+          );
+
+          // assign received value to span
+          document.getElementById('temp').textContent = temp;
+          document.getElementById('pressure').textContent = pressure;
+          document.getElementById('humidity').textContent = humidity;
+
+          // build icon
+          const weatherIcon = document.createElement('img');
+          weatherIcon.src = `http://openweathermap.org/img/w/${
+            weather[0].icon
+          }.png`;
+          document.getElementById('weatherIcon').innerHTML = '';
+          document.getElementById('weatherIcon').appendChild(weatherIcon);
+        } catch (e) {
+          // log error
+          console.error(e);
+        }
+      }
+    </script>
+  </body>
+</html>

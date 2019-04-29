@@ -1,0 +1,15 @@
+{
+  "name": "TP2",
+  "version": "1.0.0",
+  "description": "Using Asynchronous to rules the code",
+  "main": "index.js",
+  "author": "millehorde",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "weather-js": "^2.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

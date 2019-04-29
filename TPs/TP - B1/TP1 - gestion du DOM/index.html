@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <button
+          class="active"
+          data-panel-id="panel-accueil"
+          onclick="setActive(this)"
+        >
+          Accueil
+        </button>
+        <button data-panel-id="panel-cat1" onclick="setActive(this)">
+          Catégorie 1
+        </button>
+        <button data-panel-id="panel-cat2" onclick="setActive(this)">
+          Catégorie 2
+        </button>
+      </div>
+      <div id="panel-accueil" class="active panel">
+        <h2>Contenu de mon sous menu Accueil et tout et tout.</h2>
+
+        Il pourrait bien faire plusieurs lignes et même
+        <em>embarquer un peu de HTML</em>
+        donc, en gros, ce panel n'a pas vocation à accueillir juste une pauvre
+        petite ligne de texte triste.
+      </div>
+      <div id="panel-cat1" class="panel">
+        <h2>Contenu de ma sous-catégorie 1</h2>
+
+        Voilà.
+      </div>
+      <div id="panel-cat2" class="panel">
+        <ul>
+          <li>Coucou</li>
+          <li>Re-coucou</li>
+          <li>J'ai plus d'idée</li>
+          <li>Ah si, je me souviens !!!</li>
+        </ul>
+      </div>
+      <!-- 
+            Même pas de panel pour la catégorie n : tous les éléments d'un menu n'ont pas forcément
+            de sous-menu
+        -->
+    </nav>
+
+    <script src="index.js" async defer></script>
+  </body>
+</html>
