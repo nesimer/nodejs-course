@@ -1,6 +1,6 @@
-# Cours de NodeJS
+# Cours de Node.JS
 
-Cours de NodeJs pour les B2-B3 d'Ynov Aix Campus - 2019
+Cours de Node.JS pour les B2-B3 d'Ynov Aix Campus - 2019
 
 - [B1 📚](subjects/bachelor/INGESUP-B1/)
 - [B2 📚](subjects/bachelor/INGESUP-B2/)
